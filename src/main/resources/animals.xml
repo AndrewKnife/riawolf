@@ -11,6 +11,9 @@
                 <height>
                     1
                 </height>
+                <movement>
+                    Runs
+                </movement>
             </dog>
         </mammal>
     </animal>
@@ -26,6 +29,9 @@
                 <height>
                     0.4
                 </height>
+                <movement>
+                    Walks
+                </movement>
             </cat>
         </mammal>
     </animal>
@@ -41,6 +47,27 @@
                 <height>
                     0.2
                 </height>
+                <movement>
+                    Flies
+                </movement>
+            </pigeon>
+        </bird>
+    </animal>
+    <animal>
+        <bird>
+            <pigeon>
+                <name>
+                    Vandal
+                </name>
+                <weight>
+                    0.5
+                </weight>
+                <height>
+                    0.25
+                </height>
+                <movement>
+                    Flies
+                </movement>
             </pigeon>
         </bird>
     </animal>

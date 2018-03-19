@@ -44,6 +44,21 @@
             </pigeon>
         </bird>
     </animal>
+    <animal>
+        <bird>
+            <pigeon>
+                <name>
+                    Vandal
+                </name>
+                <weight>
+                    0.5
+                </weight>
+                <height>
+                    0.25
+                </height>
+            </pigeon>
+        </bird>
+    </animal>
     <bug>
 
     </bug>
