@@ -1,0 +1,53 @@
+<animals>
+    <animal>
+        <mammal>
+            <dog>
+                <name>
+                    Reksas
+                </name>
+                <weight>
+                    35
+                </weight>
+                <height>
+                    1
+                </height>
+            </dog>
+        </mammal>
+    </animal>
+    <animal>
+        <mammal>
+            <cat>
+                <name>
+                    Pukis
+                </name>
+                <weight>
+                    5
+                </weight>
+                <height>
+                    0.4
+                </height>
+            </cat>
+        </mammal>
+    </animal>
+    <animal>
+        <bird>
+            <pigeon>
+                <name>
+                    Trasher
+                </name>
+                <weight>
+                    0.2
+                </weight>
+                <height>
+                    0.2
+                </height>
+            </pigeon>
+        </bird>
+    </animal>
+    <bug>
+
+    </bug>
+    <spider>
+
+    </spider>
+</animals>
