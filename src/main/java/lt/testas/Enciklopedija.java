@@ -1,5 +1,4 @@
-import org.w3c.dom.Document;
-import java.util.List;
+package lt.testas;
 
 public class Enciklopedija {
 
@@ -11,10 +10,11 @@ public class Enciklopedija {
 
     public Enciklopedija(){
         DataWorker worker = new DataWorker();
-        Controller controller = new Controller();
-        Document doc = worker.readFile(FILE_ANIMALS);
-        List<Animal> listas = worker.populateList(doc);
-        controller.chooseAnimal(listas);
+        Viewer viewer = new Viewer();
+        Controller controller = new Controller(worker, viewer);
+        controller.createList(FILE_ANIMALS);
+        controller.selectionMenu();
+
     }
 
 

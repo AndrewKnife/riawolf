@@ -1,18 +1,6 @@
-class Mammal extends Animal{
+package lt.testas;
 
-}
-
-class Bird extends Animal{
-
-}
-
-class Bug extends Animal{
-
-}
-
-class Spider extends Animal{
-
-}
+import lt.testas.interfaces.IMovement;
 
 public class Animal {
     String family;
@@ -20,12 +8,13 @@ public class Animal {
     String name;
     double weight;
     double height;
+    IMovement IMovement;
 
-    Animal(){
+    public Animal() {
 
     }
 
-    Animal(String family, String type, String name, double weight, double height) {
+    public Animal(String family, String type, String name, double weight, double height) {
         this.family = family;
         this.type = type;
         this.name = name;
@@ -35,13 +24,13 @@ public class Animal {
 
     @Override
     public String toString() {
-        return "Animal{" +
+        return "{" +
                 "family='" + family +
                 ", type='" + type +
                 ", name='" + name +
                 ", weight=" + weight +
                 ", height=" + height +
-                '}';
+                '}'+"\n"+ IMovement.move();
     }
 
     //region Getters
@@ -67,9 +56,30 @@ public class Animal {
     }
     //endregion
 
-    public String movement() {
-        String moves;
-        moves = this.family.toUpperCase();
-        return moves;
+
+    //region Setters
+    public void setFamily(String family) {
+        this.family = family;
     }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
+    }
+
+    public void setIMovement(lt.testas.interfaces.IMovement IMovement) {
+        this.IMovement = IMovement;
+    }
+    //endregion
 }

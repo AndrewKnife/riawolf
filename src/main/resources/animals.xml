@@ -11,9 +11,9 @@
                 <height>
                     1
                 </height>
-                <movement>
+                <IMovement>
                     Runs
-                </movement>
+                </IMovement>
             </dog>
         </mammal>
     </animal>
@@ -29,9 +29,9 @@
                 <height>
                     0.4
                 </height>
-                <movement>
+                <IMovement>
                     Walks
-                </movement>
+                </IMovement>
             </cat>
         </mammal>
     </animal>
@@ -47,9 +47,9 @@
                 <height>
                     0.2
                 </height>
-                <movement>
+                <IMovement>
                     Flies
-                </movement>
+                </IMovement>
             </pigeon>
         </bird>
     </animal>
@@ -65,15 +65,30 @@
                 <height>
                     0.25
                 </height>
-                <movement>
+                <IMovement>
                     Flies
-                </movement>
+                </IMovement>
             </pigeon>
         </bird>
     </animal>
-    <bug>
-
-    </bug>
+    <animal>
+        <bug>
+            <centipede>
+                <name>
+                    Manylegs
+                </name>
+                <weight>
+                    0.05
+                </weight>
+                <height>
+                    0.1
+                </height>
+                <IMovement>
+                    Crawls
+                </IMovement>
+            </centipede>
+        </bug>
+    </animal>
     <spider>
 
     </spider>
