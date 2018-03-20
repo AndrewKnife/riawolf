@@ -8,7 +8,7 @@ public class Animal {
     String name;
     double weight;
     double height;
-    IMovement IMovement;
+    IMovement movementStrategy;
 
     public Animal() {
 
@@ -30,7 +30,7 @@ public class Animal {
                 ", name='" + name +
                 ", weight=" + weight +
                 ", height=" + height +
-                '}'+"\n"+ IMovement.move();
+                '}'+"\n"+ movementStrategy.move();
     }
 
     //region Getters
@@ -78,8 +78,8 @@ public class Animal {
         this.height = height;
     }
 
-    public void setIMovement(lt.testas.interfaces.IMovement IMovement) {
-        this.IMovement = IMovement;
+    public void setIMovement(IMovement movementStrategy) {
+        this.movementStrategy = movementStrategy;
     }
     //endregion
 }

@@ -7,54 +7,44 @@ import lt.testas.strategies.Flies;
 import lt.testas.strategies.Runs;
 import lt.testas.strategies.Walks;
 
-import java.util.List;
-
 public class AnimalFactory {
 
-    public void populateList(List<XML> xmlList){
+    public void createAnimal(XML xml) {
         Animal animal;
-        String family;
-        for(XML xml : xmlList){
-            try{
-                family = xml.getFamilyNode().getNodeName();
-                animal = getFamily(family);
-                animal.setFamily(family);
-                animal.setType(xml.getTypeNode().getNodeName());
-                animal.setName(xml.getTypeNode().getChildNodes().item(1).getTextContent().trim());
-                animal.setHeight(Double.parseDouble(xml.getTypeNode().getChildNodes().item(3).getTextContent()));
-                animal.setWeight(Double.parseDouble(xml.getTypeNode().getChildNodes().item(5).getTextContent()));
-                animal.setIMovement(getMovement(xml.getTypeNode().getChildNodes().item(7).getTextContent()));
-                Animals.listas.add(animal);
-            }catch (Exception e){
-
-            }
-        }
+        animal = getFamily(xml.getNodeFamily());
+        animal.setFamily(xml.getNodeFamily().trim());
+        animal.setType(xml.getNodeType().trim());
+        animal.setName(xml.getNodeName().trim());
+        animal.setWeight(Double.parseDouble(xml.getNodeWeight()));
+        animal.setHeight(Double.parseDouble(xml.getNodeHeight()));
+        animal.setIMovement(getMovement(xml.getNodeMove()));
+        Animals.getInfo().getListas().add(animal);
     }
 
     public Animal getFamily(String familyName) {
-        if(familyName.toUpperCase().equals("MAMMAL")){
+        if (familyName.toUpperCase().contains("MAMMAL")) {
             return new Mammal();
-        }else if(familyName.toUpperCase().equals("BIRD")){
+        } else if (familyName.toUpperCase().contains("BIRD")) {
             return new Bird();
-        }else if(familyName.toUpperCase().equals("BUG")){
+        } else if (familyName.toUpperCase().contains("BUG")) {
             return new Bug();
-        }else if(familyName.toUpperCase().equals("SPIDER")){
+        } else if (familyName.toUpperCase().contains("SPIDER")) {
             return new Spider();
-        }else{
+        } else {
             return null;
         }
     }
 
-    public IMovement getMovement(String moveType){
-        if(moveType.toUpperCase().contains("WALKS")){
+    public IMovement getMovement(String moveType) {
+        if (moveType.toUpperCase().contains("WALKS")) {
             return new Walks();
-        }else if(moveType.toUpperCase().contains("RUNS")){
+        } else if (moveType.toUpperCase().contains("RUNS")) {
             return new Runs();
-        }else if(moveType.toUpperCase().contains("FLIES")){
+        } else if (moveType.toUpperCase().contains("FLIES")) {
             return new Flies();
-        }else if(moveType.toUpperCase().contains("CRAWLS")){
+        } else if (moveType.toUpperCase().contains("CRAWLS")) {
             return new Crawls();
-        }else{
+        } else {
             return null;
         }
     }

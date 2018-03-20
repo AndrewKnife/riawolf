@@ -1,32 +1,46 @@
 package lt.testas;
 
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-
 public class XML {
-    private Node animalNode;
-    private Node familyNode;
-    private Node typeNode;
 
-    public XML(Node animalNode, Node familyNode, Node typeNode) {
-        this.animalNode = animalNode;
-        this.familyNode = familyNode;
-        this.typeNode = typeNode;
+    private String _nodeFamily;
+    private String _nodeType;
+    private String _nodeName;
+    private String _nodeHeight;
+    private String _nodeWeight;
+    private String _nodeMove;
+
+    public XML(String nodeFamily, String nodeType, String nodeName, String nodeHeight, String nodeWeight, String nodeMove) {
+        this._nodeFamily = nodeFamily;
+        this._nodeType = nodeType;
+        this._nodeName = nodeName;
+        this._nodeHeight = nodeHeight;
+        this._nodeWeight = nodeWeight;
+        this._nodeMove = nodeMove;
     }
 
     //region Getters
-
-    public Node getAnimalNode() {
-        return animalNode;
+    public String getNodeFamily() {
+        return _nodeFamily;
     }
 
-    public Node getFamilyNode() {
-        return familyNode;
+    public String getNodeType() {
+        return _nodeType;
     }
 
-    public Node getTypeNode() {
-        return typeNode;
+    public String getNodeName() {
+        return _nodeName;
     }
 
+    public String getNodeHeight() {
+        return _nodeHeight;
+    }
+
+    public String getNodeWeight() {
+        return _nodeWeight;
+    }
+
+    public String getNodeMove() {
+        return _nodeMove;
+    }
     //endregion
 }

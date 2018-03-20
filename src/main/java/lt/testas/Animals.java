@@ -7,10 +7,10 @@ public class Animals {
     private static Animals duom = null;
 
     protected Animals() {
-
+    listas= new ArrayList<Animal>();
     }
 
-    public static List<Animal> listas = new ArrayList<Animal>();
+    private   List<Animal> listas;
 
     public static Animals getInfo() {
         if (duom == null) {
@@ -21,5 +21,9 @@ public class Animals {
             }
         }
         return duom;
+    }
+
+    public List<Animal> getListas() {
+        return listas;
     }
 }

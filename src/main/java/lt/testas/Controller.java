@@ -17,28 +17,24 @@ public class Controller {
         this.viewer = viewer;
     }
 
-    //region Getters
-    public DataWorker getWorker() {
-        return worker;
-    }
-
-    public Viewer getViewer() {
-        return viewer;
-    }
-    //endregion
-
     public void createList(String fileName){
-        AnimalFactory factory = new AnimalFactory();
+        factory = new AnimalFactory();
         animals = animals.getInfo();
         Document dok = worker.readFile(fileName);
         List<XML> xmllist =  worker.populateNodes(dok);
-        factory.populateList(xmllist);
+        for(XML xml : xmllist){
+            factory.createAnimal(xml);
+        }
+
     }
 
     public void selectionMenu(){
-        viewer.printAllNames(animals.listas);
-        viewer.chooseAnimal(animals.listas);
+        viewer.printAllNames();
+        Animal ani = worker.getAnimalByName(viewer.chooseAnimal());
+        viewer.printAnimalInfo(ani);
     }
+
+
 
 
 }
